@@ -23,9 +23,9 @@ public static class LambdaPath<TSource>
 
         protected override Expression VisitMember(MemberExpression node)
         {
-            if (!(node.Member is PropertyInfo))
+            if (!(node.Member is PropertyInfo or FieldInfo))
             {
-                throw new ArgumentException("The path can only contain properties", nameof(node));
+                throw new ArgumentException("The path can only contain properties or fields", nameof(node));
             }
 
             Path.Add($".{node.Member.Name}");

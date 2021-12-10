@@ -11,6 +11,8 @@ namespace FuncToString
         public string FooBar { get; set; }
 
         public NestedType NestedType { get; set; }
+
+        public NestedType WithoutGetSet;
     }
 
     public class NestedType

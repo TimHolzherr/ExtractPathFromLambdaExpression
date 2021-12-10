@@ -18,6 +18,7 @@ public class LambdaPathTest
                 new("NestedType.MoreNestingList[0].EvenMoreArray[0].Field", m => m.NestedType.MoreNestingList[0].EvenMoreArray[0].Field),
                 new("bars[*].name", m => m.bars['*'].name),
                 new("NestedType.MoreNestingList[*].EvenMoreArray[*].Field", m => m.NestedType.MoreNestingList[-1].EvenMoreArray['*'].Field),
+                new("WithoutGetSet.MoreNesting.EvenMore.Field", m => m.WithoutGetSet.MoreNesting.EvenMore.Field),
             }
             .Select(t => new object[] { t.Item2, t.Item1 });
 
